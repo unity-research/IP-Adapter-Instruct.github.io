@@ -763,30 +763,24 @@ mjx-c.mjx-c31::before {
                   <figure class="image">
                     <img src="Collaborative%20Control%20for%20Geometry-Conditioned%20PBR%20Image%20Generation_files/controlnet.png">
                   </figure>
-
                   <p>
-                    Since our method keeps original cross attention input scheme, it is compatible with any existing control method or unet based model to the same degree as IP-Adapter.                    <br>
+                    Since our method keeps original cross attention input scheme, it is compatible with any existing control method to the same degree as IP-Adapter.                    <br>
                     This feature vastly expands the usability of our method in practical scenarios.
                   </p>
-
-                  <h3> Examples </h3>
+                  <figure class="image">
+                    <img src="Collaborative%20Control%20for%20Geometry-Conditioned%20PBR%20Image%20Generation_files/other_models.png">
+                  </figure>
+                  <p>
+                    This functionality also extends to compatability with other sd 1.5 based models.
+                  </p>
 
                     <figure class="image">
-                      <img src="Collaborative%20Control%20for%20Geometry-Conditioned%20PBR%20Image%20Generation_files/lock.png">
-                      <figcaption>"A wooden chest with a steel lock"</figcaption>
+                      <img src="Collaborative%20Control%20for%20Geometry-Conditioned%20PBR%20Image%20Generation_files/header.PNG">
+                      <figcaption>Further examples</figcaption>
                     </figure>
 
-                    <figure class="image">
-                      <img src="Collaborative%20Control%20for%20Geometry-Conditioned%20PBR%20Image%20Generation_files/cobblestone.png">
-                      <figcaption>The model generalizes to 2D exemplars even though the dataset does not contain any.
-                        The
-                        condition normal map is constant <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="0"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mo>=</mo><mn>1</mn></math></mjx-assistive-mml></mjx-container></figcaption>
-                    </figure>
+   
 
-                    <figure class="image">
-                      <img src="Collaborative%20Control%20for%20Geometry-Conditioned%20PBR%20Image%20Generation_files/ipadapter.jpg">
-                      <figcaption>An example of our method combined with another controlling network (IP-Adapter)
-                      </figcaption>
                       <!-- <article class="message is-warning">
                   <div class="message-header">
                     <p>TBD</p>
@@ -807,29 +801,23 @@ mjx-c.mjx-c31::before {
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column">
-          <!-- Gradio Demo -->
+          <!-- Spaces Demo -->
           <div class="columns is-centered">
             <div class="column is-full-width">
               <h2 class="title is-3">Interactive Demonstration</h2>
 
               <div class="content has-text-justified">
                 <p>
-                  We provide an interactive demonstration of our method using <a href="https://www.gradio.app/">Gradio</a>.
-                  You can try out our method with your own meshes and prompts and see the results in real-time.
+                  We provide an interactive demonstration of our method using Huggingface Spaces based Gradio demo.
+                  You can try out our method with your own input images and see the results in real-time.
                 </p>
                 <p>
                 </p><h3>How to use: </h3>
                 <ol>
-                  <li>Pick a mesh from the <a href="#examples">examples</a> or upload your own.</li>
-                  <li>After positioning the camera, click "Capture Normal Map"</li>
+                  <li>Upload an input image.</li>
+                  <li>Use an instruction preset</li>
                   <li>Enter a prompt in the text box.</li>
-                  <li>Click "Generate PBR Materials" to see the generated PBR maps.</li>
-                </ol>
-                <p></p>
-                <p>
-                  <b><span id="examples-link">Example meshes are provided <a href="#examples">below</a>.</span></b>
-                </p>
-                <gradio-app src="https://eccv-gradio.holo-azure.internal.unity.com/"><div class="gradio-container gradio-container-4-17-0 svelte-182fdeq embed-container" data-iframe-height="" style="min-height: 300px; background: var(--body-background-fill);"><div class="main svelte-182fdeq"><div class="wrap default full svelte-1occ011 translucent" style="position: static; padding: var(--size-8) 0;"><span class="error svelte-1occ011">Error</span> <div class="error svelte-y6l4b" slot="error"><p class="svelte-y6l4b"><strong>Could not load this space.</strong></p> <p class="svelte-y6l4b">Please contact the author of the page to let them know.</p></div></div> </div> </div></gradio-app>
+                  <li>Click Generate</li>
               </div>
             </div>
           </div>
@@ -843,10 +831,10 @@ mjx-c.mjx-c31::before {
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{,
-  author    = {Vainer, Shimon and Boss, Mark and Parger, Mathias and Kutsy, Konstantin and 
-               De Nigris, Dante and Rowles, Ciara and Perony, Nicolas and Donn\'e, Simon},
-  title     = {Collaborative Control for Geometry-Conditioned PBR Image Generation},
-  journal   = {arXiv preprint arXiv:2402.05919},
+  author    = {Rowles, Ciara and Vainer, Shimon and Kutsy, Konstantin and 
+               De Nigris, Dante and Elizarov,Slava and and Donn\'e, Simon},
+  title     = {IP Adapter Instruct: Resolving Ambiguity in Image-based Conditioning using Instruct Prompts },
+  journal   = {INSERT LATER},
   year      = {2024},
 }</code></pre>
     </div>
@@ -857,17 +845,6 @@ mjx-c.mjx-c31::before {
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <h3 class="title is-5">Example objects credits:</h3>
-          <ul>
-            <li><strong>antique_movie_camera</strong> - <a href="https://sketchfab.com/zeps9001">Janis Zeps</a></li>
-            <li><strong>cannon</strong> - <a href="https://sketchfab.com/Marek_Grz">Marek_Grz</a></li>
-            <li><strong>hut</strong> - <a href="https://sketchfab.com/BytesCrafter">BytesCrafter</a>
-            </li>
-            <li><strong>chest</strong> - <a href="https://sketchfab.com/MananGupta">Manan Gupta</a></li>
-            <li><strong>barrel</strong> - <a href="https://sketchfab.com/feliperbrasil">Felipe
-                R.</a></li>
-          </ul>
-          <p>
             This website is based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies.github.io source
               code</a>
             and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
